@@ -9,7 +9,7 @@ exports.subirExcel = async (file) => {
   });
 
   // mismo host/puerto que imagen, endpoint /excel
-  const response = await axios.post('http://localhost:3000/excel', formData, {
+  const response = await axios.post('http://75.101.189.104:3001/excel', formData, {
     headers: formData.getHeaders(),
   });
 
