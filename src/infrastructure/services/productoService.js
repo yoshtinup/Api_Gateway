@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 exports.crearProducto = async (producto) => {
-  const response = await axios.post('http://3.214.95.5:3002/api/v1/producto', producto);
+  const response = await axios.post('http://:3002/api/v1/producto', producto);
   return response.data;
 };
 exports.obtenerProductoPorId = async (id) => {
