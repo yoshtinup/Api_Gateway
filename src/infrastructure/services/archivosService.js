@@ -8,8 +8,8 @@ exports.subirExcel = async (file) => {
     contentType: file.mimetype,
   });
 
-  // En local, el servicio de archivos corre en 3000
-  const response = await axios.post('http://3.224.166.195:3000/excel', formData, {
+  // En local, el servicio de archivos corre en 3001
+  const response = await axios.post('http://75.101.189.104:3001/excel', formData, {
     headers: formData.getHeaders(),
   });
 
