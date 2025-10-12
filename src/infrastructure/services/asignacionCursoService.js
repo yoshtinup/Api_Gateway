@@ -1,12 +1,12 @@
 const axios = require('axios');
-
+require('dotenv').config();
 exports.crearAsignacionCurso = async (asignacion) => {
   try {
     console.log('=== ENVIANDO A APIEMPRESA ===');
-  console.log('URL:', 'http://3.214.95.5:3002/api/v1/asignar-curso');
+  console.log('URL:', `${process.env.API_EMPRESA}/asignar-curso`);
     console.log('Datos:', asignacion);
 
-  const response = await axios.post('http://3.214.95.5:3002/api/v1/asignar-curso', asignacion);
+  const response = await axios.post(`${process.env.API_EMPRESA}/asignar-curso`, asignacion);
 
     console.log('=== RESPUESTA DE APIEMPRESA ===');
     console.log('Status:', response.status);
@@ -25,7 +25,7 @@ exports.crearAsignacionCurso = async (asignacion) => {
 // PUT /api/v1/asignar-curso/:id
 exports.actualizarAsignacionCurso = async (id, asignacion) => {
   try {
-  const url = `http://3.214.95.5:3002/api/v1/asignar-curso/${id}`;
+  const url = `${process.env.API_EMPRESA}/asignar-curso/${id}`;
     console.log('=== ENVIANDO UPDATE A APIEMPRESA ===');
     console.log('URL:', url);
     console.log('Datos:', asignacion);

@@ -1,5 +1,6 @@
 const axios = require('axios');
 const FormData = require('form-data');
+require('dotenv').config();
 
 exports.subirExcel = async (file) => {
   const formData = new FormData();
@@ -9,7 +10,7 @@ exports.subirExcel = async (file) => {
   });
 
   // En local, el servicio de archivos corre en 3001
-  const response = await axios.post('http://75.101.189.104:3001/excel', formData, {
+  const response = await axios.post(`${process.env.API_ARCHIVOS}/excel`, formData, {
     headers: formData.getHeaders(),
   });
 
