@@ -9,12 +9,12 @@ app.use(express.json());
 //Servicios Externos
 
 app.use('/imagenes', createProxyMiddleware({
-  target: 'http://75.101.189.104:3001/imagen',
+  target: 'http://52.71.173.229:3001/imagen',
   changeOrigin: true,
 }));
 
 app.use('/productos', createProxyMiddleware({
-  target: 'http://3.214.95.5:3002/api/v1/producto',
+  target: 'http://184.72.229.57:3002/api/v1/producto',
   changeOrigin: true,
 }));
 
