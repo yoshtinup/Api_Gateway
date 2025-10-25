@@ -8,6 +8,7 @@ module.exports = async function registrarProductoUseCase({ imagenService, produc
     cantidad: body.cantidad,
     precio: body.precio,
     imagen: filename,
+    precioUnitario: body.precioUnitario
   });
 
   return await productoService.crearProducto(producto);
