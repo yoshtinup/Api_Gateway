@@ -15,7 +15,8 @@ module.exports = async function actualizarProductoUseCase({ imagenService, produ
     nombre: body.nombre,
     cantidad: body.cantidad,
     precio: body.precio,
-    imagen: imagenId
+    imagen: imagenId,
+    precioUnitario: body.precioUnitario
   });
 
   // 4. Actualiza el producto
